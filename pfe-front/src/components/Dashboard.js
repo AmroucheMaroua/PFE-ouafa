@@ -12,6 +12,13 @@ const data = [
   { name: 'Jul', uv: 3490, pv: 4300, amt: 2100 },
 ];
 
+const data2 = [
+    { name: 'Category A', value: 400 },
+    { name: 'Category B', value: 300 },
+    { name: 'Category C', value: 200 },
+    { name: 'Category D', value: 100 },
+  ];
+
 const Dashboard = () => {
   return (
     <div className="p-6 bg-gray-900 text-white min-h-screen">
@@ -65,7 +72,7 @@ const Dashboard = () => {
           <h3 className="text-xl font-bold mb-4">Pie Chart Example</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
-              <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} fill="#8884d8" label />
+              <Pie data={data2} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} fill="#8884d8" label />
               <Tooltip />
               <Legend />
             </PieChart>
