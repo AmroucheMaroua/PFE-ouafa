@@ -1,6 +1,6 @@
 // src/components/Dashboard.js
 import React from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts';
+import { PieChart , Pie , LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts';
 
 const data = [
   { name: 'Jan', uv: 4000, pv: 2400, amt: 2400 },
@@ -58,7 +58,23 @@ const Dashboard = () => {
             </BarChart>
           </ResponsiveContainer>
         </div>
+
+
+        {/* Pie Chart */}
+        <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h3 className="text-xl font-bold mb-4">Pie Chart Example</h3>
+          <ResponsiveContainer width="100%" height={300}>
+            <PieChart>
+              <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} fill="#8884d8" label />
+              <Tooltip />
+              <Legend />
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
+
+        
       </div>
+      
     </div>
   );
 };
